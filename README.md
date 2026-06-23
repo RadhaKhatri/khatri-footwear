@@ -1,6 +1,6 @@
 # 👟 Khatri Footwear — Management System
 
-**Prop. Bhavarlal Khatri | Solapur, Maharashtra**
+**Prop. Bhavarlal Khatri | Ramanandnagar, Maharashtra**
 
 A complete, production-ready retail management system for Khatri Footwear.
 
