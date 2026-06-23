@@ -42,7 +42,7 @@ export default function Setup() {
             <div><label className="label">Shop Name</label><input className="input-field" value={form.shopName} onChange={e => f('shopName', e.target.value)} required /></div>
             <div><label className="label">Owner Name</label><input className="input-field" value={form.ownerName} onChange={e => f('ownerName', e.target.value)} required /></div>
           </div>
-          <div><label className="label">Shop Address</label><input className="input-field" placeholder="Main Market, Sholapur, Maharashtra" value={form.address} onChange={e => f('address', e.target.value)} /></div>
+          <div><label className="label">Shop Address</label><input className="input-field" placeholder="Main Market, Rananandnagar, Maharashtra" value={form.address} onChange={e => f('address', e.target.value)} /></div>
           <div className="grid grid-cols-2 gap-3">
             <div><label className="label">Phone</label><input className="input-field" type="tel" value={form.phone} onChange={e => f('phone', e.target.value)} /></div>
             <div><label className="label">GSTIN (optional)</label><input className="input-field" placeholder="27XXXXX..." value={form.gstin} onChange={e => f('gstin', e.target.value)} /></div>
