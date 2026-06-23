@@ -209,7 +209,7 @@ export default function Billing() {
             <div className="text-center pb-5 mb-5 border-b-2 border-blue-900">
               <h2 className="text-2xl font-bold text-blue-900 uppercase tracking-wide">Khatri Footwear</h2>
               <p className="text-gray-500 text-sm mt-1">Prop. Bhavarlal Khatri</p>
-              <p className="text-gray-400 text-xs mt-0.5">Main Market, Solapur, Maharashtra</p>
+              <p className="text-gray-400 text-xs mt-0.5">Main Market, Ramanandnagar, Maharashtra</p>
               <p className="text-gray-400 text-xs">📞 Contact your shop number · GST No: as applicable</p>
             </div>
 
