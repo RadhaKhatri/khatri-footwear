@@ -290,7 +290,7 @@ git push -u origin main
 
 ## 📞 Support
 
-This application is built specifically for **Khatri Footwear, Solapur**.
+This application is built specifically for **Khatri Footwear, Ramanandnagar**.
 For any issues, check:
 1. Render logs (Dashboard → Logs tab)
 2. Browser console (F12 → Console tab)
