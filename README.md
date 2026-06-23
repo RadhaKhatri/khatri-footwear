@@ -95,7 +95,7 @@ GEMINI_API_KEY        = (from Step below)
 
 ### STEP 4 — Get Gemini API Key (Free AI)
 
-1. Go to **https://aistudio.google.com/app/apikey**
+1. Go to **https://aistudio.google.com/app/apikey** 
 2. Click **Create API Key** → Copy it
 3. Go back to Render → Environment → add:
    `GEMINI_API_KEY = AIza...your-key...`
