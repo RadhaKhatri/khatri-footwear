@@ -120,3 +120,7 @@ $$ LANGUAGE plpgsql;
 CREATE OR REPLACE TRIGGER products_updated_at
   BEFORE UPDATE ON products
   FOR EACH ROW EXECUTE FUNCTION update_updated_at();
+
+-- Run this in your Neon SQL editor to add report password support
+-- (Only needed if you already ran schema.sql — new installs get this from schema.sql)
+ALTER TABLE shop_settings ADD COLUMN IF NOT EXISTS report_password_hash TEXT;
