@@ -124,3 +124,7 @@ CREATE OR REPLACE TRIGGER products_updated_at
 -- Run this in your Neon SQL editor to add report password support
 -- (Only needed if you already ran schema.sql — new installs get this from schema.sql)
 ALTER TABLE shop_settings ADD COLUMN IF NOT EXISTS report_password_hash TEXT;
+
+-- Run this once in your Neon SQL Editor
+-- Adds purchase_price to sale_items so P&L can be calculated correctly
+ALTER TABLE sale_items ADD COLUMN IF NOT EXISTS purchase_price NUMERIC(10,2) DEFAULT 0;
