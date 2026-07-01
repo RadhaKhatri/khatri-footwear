@@ -128,3 +128,12 @@ ALTER TABLE shop_settings ADD COLUMN IF NOT EXISTS report_password_hash TEXT;
 -- Run this once in your Neon SQL Editor
 -- Adds purchase_price to sale_items so P&L can be calculated correctly
 ALTER TABLE sale_items ADD COLUMN IF NOT EXISTS purchase_price NUMERIC(10,2) DEFAULT 0;
+
+CREATE TABLE IF NOT EXISTS daily_expenses (
+  id SERIAL PRIMARY KEY,
+  expense_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  amount NUMERIC(10,2) NOT NULL,
+  reason VARCHAR(300) NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS idx_daily_expenses_date ON daily_expenses(expense_date);
