@@ -9,6 +9,7 @@ import reportsRoutes from './routes/reports.js'
 import voiceRoutes from './routes/voice.js'
 import shopSettingsRoutes from './routes/shopSettings.js'
 import expensesRoutes from './routes/expenses.js'
+import vendorPurchasesRoutes from './routes/vendorPurchases.js'
 
 dotenv.config()
 
@@ -46,6 +47,7 @@ app.use('/api/reports', reportsRoutes)
 app.use('/api/voice', voiceRoutes)
 app.use('/api/shop-settings', shopSettingsRoutes)
 app.use('/api/expenses', expensesRoutes)
+app.use('/api/vendor-purchases', vendorPurchasesRoutes)
 
 // ── 404 handler ───────────────────────────────────────────────────────────────
 app.use((req, res) => {

@@ -3,7 +3,7 @@ import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import {
   LayoutDashboard, PackagePlus, Package, FileText,
-  Receipt, BarChart3, Settings, LogOut, Menu, X, ChevronDown
+  Receipt, BarChart3, Settings, LogOut, Menu, X, ChevronDown, BookOpen
 } from 'lucide-react'
 
 const NAV = [
@@ -13,6 +13,7 @@ const NAV = [
   { to: '/stock', icon: Package, label: 'Stock List' },
   { to: '/add-stock', icon: PackagePlus, label: 'Add Stock' },
   { to: '/vendor-bills', icon: FileText, label: 'Vendor Bills' },
+  { to: '/vendor-purchases', icon: BookOpen, label: 'Purchase Ledger' },
   { section: 'Sales' },
   { to: '/billing', icon: Receipt, label: 'Billing' },
   { to: '/reports', icon: BarChart3, label: 'Reports' },

@@ -11,6 +11,7 @@ import VendorBills from './pages/VendorBills'
 import Billing from './pages/Billing'
 import Reports from './pages/Reports'
 import ShopSettings from './pages/ShopSettings'
+import VendorPurchases from './pages/VendorPurchases'
 import Loader from './components/Loader'
 
 function ProtectedRoute({ children }) {
@@ -36,6 +37,7 @@ function AppRoutes() {
         <Route path="billing" element={<Billing />} />
         <Route path="reports" element={<Reports />} />
         <Route path="settings" element={<ShopSettings />} />
+        <Route path="vendor-purchases" element={<VendorPurchases />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

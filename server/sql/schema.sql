@@ -137,3 +137,33 @@ CREATE TABLE IF NOT EXISTS daily_expenses (
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 CREATE INDEX IF NOT EXISTS idx_daily_expenses_date ON daily_expenses(expense_date);
+
+CREATE TABLE IF NOT EXISTS vendors (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  phone VARCHAR(20),
+  address TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS vendor_purchases (
+  id SERIAL PRIMARY KEY,
+  vendor_id INTEGER NOT NULL REFERENCES vendors(id) ON DELETE CASCADE,
+  purchase_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  total_amount NUMERIC(12,2) NOT NULL DEFAULT 0,
+  paid_amount  NUMERIC(12,2) NOT NULL DEFAULT 0,
+  notes TEXT,
+  bill_image_url TEXT,
+  bill_image_public_id TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS vendor_payments (
+  id SERIAL PRIMARY KEY,
+  purchase_id INTEGER NOT NULL REFERENCES vendor_purchases(id) ON DELETE CASCADE,
+  payment_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  amount NUMERIC(12,2) NOT NULL,
+  note TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
